@@ -1,6 +1,9 @@
+from decouple import config
 import reddit_mod
 import random
 from discord.ext import commands
+
+API_TOKEN = config('TOKEN')
 
 bot = commands.Bot(description="test", command_prefix="!")
 
@@ -20,4 +23,4 @@ async def meme(ctx):
     await ctx.channel.send(txt)
 
 
-bot.run('OTAzMzU3MTg5NzI3NjA0Nzk2.YXry8Q.whqmSrfryPIVppB_esObGYD0gxw')
+bot.run('TOKEN')
