@@ -1,9 +1,10 @@
-from decouple import config
+from os import environ as env
+from dotenv import load_dotenv
 import reddit_mod
 import random
 from discord.ext import commands
 
-API_TOKEN = config('TOKEN')
+load_dotenv()
 
 bot = commands.Bot(description="test", command_prefix="!")
 
@@ -23,4 +24,4 @@ async def meme(ctx):
     await ctx.channel.send(txt)
 
 
-bot.run('TOKEN')
+bot.run(env['TOKEN'])
