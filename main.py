@@ -6,7 +6,7 @@ from discord.ext import commands
 
 load_dotenv()
 
-bot = commands.Bot(description="test", command_prefix="m!")
+bot = commands.Bot(description="test", command_prefix=">>")
 
 @bot.command()
 async def meme(ctx):
@@ -23,5 +23,10 @@ async def meme(ctx):
     txt = f'{post.title}\n{u}'
     await ctx.channel.send(txt)
 
+
+@bot.command()
+async def code(ctx):
+    print(ctx)
+    await ctx.channel.send("https://github.com/LoboAdrian/programmerhumor")
 
 bot.run(env['TOKEN'])
