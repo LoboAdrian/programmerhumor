@@ -6,7 +6,7 @@ from discord.ext import commands
 
 load_dotenv()
 
-bot = commands.Bot(description="test", command_prefix="!")
+bot = commands.Bot(description="test", command_prefix="m!")
 
 @bot.command()
 async def meme(ctx):
